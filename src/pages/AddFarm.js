@@ -1,13 +1,14 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import FarmsList from "../components/FarmsList";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function AddFarm(props) {
 
     const [name,setName] = useState("")
     const [pos1,setPos1] = useState("")
     const [pos2,setPos2] = useState("")
+    const navigate = useNavigate()
 
 
     const location = useLocation()
@@ -28,6 +29,7 @@ function AddFarm(props) {
 
    return(
         <div>
+             <p onClick={()=>{navigate("/")}}>Return to home</p>
             <h2>Add farm</h2>
             <form onSubmit={onSubmit}>
                 <input type="text" placeholder="Name" onChange={e=>setName(e.target.value)}/>

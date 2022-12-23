@@ -12,7 +12,7 @@ const Home = () => {
     return(
          <div>
              <h1>HOME</h1>
-             <p onClick={()=>{navigate("/anadir-granja")}}>Añadir granja</p>
+             <p onClick={()=>{navigate("/anadir-granja")}}>Add farm</p>
          </div>
     )
  }
